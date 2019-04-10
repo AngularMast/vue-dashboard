@@ -13,19 +13,17 @@ import "./plugins/vuetify";
 import "roboto-fontface/css/roboto/roboto-fontface.css";
 import "font-awesome/css/font-awesome.css";
 import 'vue-datetime/dist/vue-datetime.css'
-
-// You need a specific loader for CSS files
  
 Vue.use(AuthPlugin);
 Vue.use(Datetime)
-
+ 
 Vue.config.productionTip = false;
-Vue.prototype.$http = Axios;
+Vue.prototype.$http = Axios; 
 const token = localStorage.getItem("token");
-
+ 
 if (token) {
   Vue.prototype.$http.defaults.headers.common["Authorization"] = token;
-}
+} 
 
 Vue.use(VuetifyGoogleAutocomplete, {
   apiKey: 'AIzaSyCpJOWuQiXHTAnmdxgqjPRCwOKkTllFtsg',
