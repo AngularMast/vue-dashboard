@@ -3,9 +3,9 @@ import { EventEmitter } from "events";
 import authConfig from "../../auth_config.json";
 
 const webAuth = new auth0.WebAuth({
-  domain: authConfig.domain,
+  domain: authConfig.domain,  
   redirectUri: `${window.location.origin}/callback`,
-  clientID: authConfig.clientId,
+  clientID: authConfig.clientId,  
   audience: authConfig.apiIdentifier,
   responseType: "code id_token token",
   scope: "openid profile email"

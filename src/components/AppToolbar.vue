@@ -104,7 +104,7 @@ export default {
       ]
     };
   },
-  computed: {
+  computed: { 
     toolbarColor() {
       return this.$vuetify.options.extra.mainNav;
     },
