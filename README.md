@@ -1,4 +1,12 @@
-# Ctm-Vue
+# Vue-dashboard
+
+* auth0
+* vuetify
+* chart.js
+* azure
+* google apis
+
+All have implemented well.
 
 ## Project Structure
 
