@@ -27,7 +27,7 @@
               <v-list-tile-content>
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
               </v-list-tile-content>
-            </v-list-tile>
+            </v-list-tile>  
             <template v-for="subItem in item.items">
               <!--sub group-->
               <v-list-group

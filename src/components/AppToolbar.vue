@@ -107,7 +107,7 @@ export default {
   computed: { 
     toolbarColor() {
       return this.$vuetify.options.extra.mainNav;
-    },
+    },  
     
     auth0Picture() {
       return this.profile.picture;

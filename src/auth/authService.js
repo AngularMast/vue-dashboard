@@ -8,7 +8,7 @@ const webAuth = new auth0.WebAuth({
   clientID: authConfig.clientId,  
   audience: authConfig.apiIdentifier,
   responseType: "code id_token token",
-  scope: "openid profile email"
+  scope: "openid profile email" 
 });
 
 const localStorageKey = "loggedIn";
@@ -17,7 +17,7 @@ const loginEvent = "loginEvent";
 class AuthService extends EventEmitter {
   idToken = null;
   profile = null;
-  tokenExpiry = null;
+  tokenExpiry = null; 
   result = null;
 
   login(customState) {
