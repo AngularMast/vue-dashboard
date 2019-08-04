@@ -83,18 +83,6 @@ export default {
       isAuthenticated: false,
       profile: {},
       items: [
-        // {
-        //   icon: "account_circle",
-        //   href: "#",
-        //   title: "Profile",
-        //   click: this.handleProfile
-        // },
-        // {
-        //   icon: "settings",
-        //   href: "#",
-        //   title: "Settings",
-        //   click: this.handleSetting
-        // },
         {
           icon: "fullscreen_exit",
           href: "#",
