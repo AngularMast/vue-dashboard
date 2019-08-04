@@ -2,9 +2,9 @@
   <div id="pageDashboard">
     <v-container grid-list-xl fluid>
       <v-layout row wrap>
-        <!-- <v-flex lg12 sm12 xs12>
-          <h3 style="color: red">{{errMsg }}</h3>
-        </v-flex> -->
+        <v-flex v-if="isMobile()" lg12 sm12 xs12>
+          <h3 style="color: red">Desktop Only</h3>
+        </v-flex>
         <v-flex lg8 sm12 xs12>
           <v-widget title="Site Traffic" content-bg="white">
             <v-btn icon slot="widget-header-action">
@@ -260,6 +260,14 @@ export default {
     methods: {
       open (event) {
         alert(event.title)
+      },
+      isMobile() {
+        if (screen.width <= 760) {
+          return true;
+        }
+        else {
+          return false;
+        }
       }
     }
 };
