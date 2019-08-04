@@ -115,6 +115,7 @@ export default {
   },
   methods: {
     handleDrawerToggle() {
+      console.log(this.$store.state.showDrawer);
       this.$store.state.showDrawer = !this.$store.state.showDrawer;
     },
     handleFullScreen() {
