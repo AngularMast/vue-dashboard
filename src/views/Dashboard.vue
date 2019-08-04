@@ -2,9 +2,9 @@
   <div id="pageDashboard">
     <v-container grid-list-xl fluid>
       <v-layout row wrap>
-        <v-flex v-if="isMobile()" lg12 sm12 xs12>
+        <!-- <v-flex v-if="isMobile()" lg12 sm12 xs12>
           <h3 style="color: red">Desktop Only</h3>
-        </v-flex>
+        </v-flex> -->
         <v-flex lg8 sm12 xs12>
           <v-widget title="Site Traffic" content-bg="white">
             <v-btn icon slot="widget-header-action">

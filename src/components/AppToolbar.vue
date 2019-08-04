@@ -73,6 +73,7 @@
 <script>
 import NotificationList from "@/components/widgets/list/NotificationList";
 import Util from "@/util";
+import { constants } from 'crypto';
 export default {
   name: "AppToolbar",
   components: {
@@ -83,6 +84,18 @@ export default {
       isAuthenticated: false,
       profile: {},
       items: [
+        // {
+        //   icon: "account_circle",
+        //   href: "#",
+        //   title: "Profile",
+        //   click: this.handleProfile
+        // },
+        // {
+        //   icon: "settings",
+        //   href: "#",
+        //   title: "Settings",
+        //   click: this.handleSetting
+        // },
         {
           icon: "fullscreen_exit",
           href: "#",
@@ -92,10 +105,10 @@ export default {
       ]
     };
   },
-  computed: { 
+  computed: {
     toolbarColor() {
       return this.$vuetify.options.extra.mainNav;
-    },  
+    },
     
     auth0Picture() {
       return this.profile.picture;
@@ -103,8 +116,7 @@ export default {
   },
   methods: {
     handleDrawerToggle() {
-      console.log(this.$store.state.showDrawer);
-      this.$store.state.showDrawer = !this.$store.state.showDrawer;
+      this.$store.state.app.showDrawer = !this.$store.state.app.showDrawer;
     },
     handleFullScreen() {
       Util.toggleFullScreen();
@@ -117,10 +129,17 @@ export default {
     handleLoginEvent(data) {
       this.profile = data.profile;
       this.isAuthenticated = data.loggedIn;
-      console.log(this.profile);
     },
     handleSetting() {},
-    handleProfile() {}
+    handleProfile() {},
+    isMobile() {
+      if (screen.width <= 760) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
   },
   mounted() {
     this.$auth.getResult().then((authResult) => {

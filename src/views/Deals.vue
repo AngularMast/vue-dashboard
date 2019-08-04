@@ -293,7 +293,7 @@ export default {
 
       description: "This is an offer",
       URL:
-        "https://www.experienceoz.com.au/en/brisbane/brisbane-to-movie-world-plus-entry/brisbane-to-warner-bros-movie-world-including-entry",
+        "https://",
 
       isNotification: true,
       cta: "Submit an Offer",
@@ -306,6 +306,13 @@ export default {
     };
   },
   watch: {
+    brand(val) {
+      this.brandCons = !val;
+    },
+    brandCons( val ) {
+
+      this.brand = !val;
+    },
     targetPostCode (val) {
       let diff = this.difference(val, this.postCode);
       this.postCode = this.postCode.concat(diff);

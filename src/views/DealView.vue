@@ -69,9 +69,15 @@
             <td class="text-xs-left" @click="viewDetail(props.item)">{{ getFormatDate(new Date(props.item.active)) }}</td>
             <td class="text-xs-left" @click="viewDetail(props.item)">{{ getFormatDate(new Date(props.item.expire)) }}</td>
             <td class="justify-center layout px-0">
+              <div style="flex: none">
               <v-btn @click="remove(props.item)" flat icon color="red">
                 <v-icon>delete</v-icon>
               </v-btn>
+
+              <v-btn @click="duplicate(props.item)" flat icon color="blue">
+                <v-icon>file_copy</v-icon>
+              </v-btn>
+              </div>
             </td>
           </tr>
         </template>
@@ -163,6 +169,9 @@ export default {
     remove(item) {
       console.log(item);
     },
+    duplicate(item) {
+      console.log(item);
+    },
     send_request() {
 
       return new Promise((resolve, reject) => {
@@ -242,6 +251,7 @@ export default {
       if (this.permission) {
         this.send_request().then(data => {
           this.offers_data = data.items;
+          console.log(data.items);
           this.totalOffers = data.total;
         });
       }

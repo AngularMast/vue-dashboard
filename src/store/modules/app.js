@@ -6,7 +6,7 @@ const state = {
   items: [],
   error: null,
   checkoutStatus: null,
-  showDrawer: true,
+  showDrawer: screen.width <= 1250 ? false : true,
   status: "",
   token: localStorage.getItem("token") || "",
   user: {},

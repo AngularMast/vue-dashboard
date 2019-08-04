@@ -3,7 +3,7 @@
     class="app--drawer"
     :mini-variant.sync="mini"
     app
-    v-model="$store.state.showDrawer"
+    v-model="$store.state.app.showDrawer"
     width="300"
   >
     <v-toolbar color="primary darken-1" dark>
@@ -27,7 +27,7 @@
               <v-list-tile-content>
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
               </v-list-tile-content>
-            </v-list-tile>  
+            </v-list-tile>
             <template v-for="subItem in item.items">
               <!--sub group-->
               <v-list-group

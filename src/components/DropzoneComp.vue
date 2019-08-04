@@ -8,6 +8,7 @@
     <div class="dropzone-custom-content">
       <h3 class="dropzone-custom-title">Drag and drop to upload content!</h3>
       <div class="subtitle">or click to select a file from your computer</div>
+      <div class="subtitle">“900 x 600 pixels”</div>
     </div>
   </vue-dropzone>
 </template>
