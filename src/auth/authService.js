@@ -22,7 +22,7 @@ class AuthService extends EventEmitter {
 
   login(customState) {
     webAuth.authorize({
-      connection: "Mobile App Development",
+      //connection: "Mobile App Development",
       appState: customState
     });
   }
