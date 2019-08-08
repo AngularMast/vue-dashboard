@@ -7,7 +7,7 @@ const webAuth = new auth0.WebAuth({
   redirectUri: `${window.location.origin}/callback`,
   clientID: authConfig.clientId,
   audience: authConfig.apiIdentifier,
-  responseType: "code id_token token",
+  responseType: /*"code id_token */"token",
   scope: "openid profile email"
 });
 
